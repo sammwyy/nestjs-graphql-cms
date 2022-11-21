@@ -8,6 +8,7 @@ import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
+import { RolesModule } from './modules/roles/roles.module';
 import { SessionsModule } from './modules/sessions/sessions.module';
 import { UsersModule } from './modules/users/users.module';
 
@@ -34,6 +35,7 @@ import { UsersModule } from './modules/users/users.module';
      * Load all the remaining modules that are responsible for managing different schemes and services.
      */
     AuthModule,
+    RolesModule,
     SessionsModule,
     UsersModule,
   ],

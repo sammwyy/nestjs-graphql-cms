@@ -1,0 +1,18 @@
+import { Field, InputType } from '@nestjs/graphql';
+import { IsHexColor, Length } from 'class-validator';
+
+@InputType()
+export default class UpdateRoleDTO {
+  @Length(1, 256)
+  @Field(() => String)
+  displayName?: string;
+
+  @IsHexColor()
+  @Length(1, 256)
+  @Field(() => String)
+  badgeColor?: string;
+
+  @Length(1, 256)
+  @Field(() => [String])
+  permissions?: string[];
+}
